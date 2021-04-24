@@ -3,30 +3,41 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
+using PlayFab;
+using PlayFab.ClientModels;
+using Newtonsoft.Json;
+
 
 public class PanelManager : MonoBehaviour {
-
+	[Header("UI")]
+	
 	public Animator initiallyOpen;
-
+	public Animator authMenu;
 	private int m_OpenParameterId;
 	private Animator m_Open;
 	private GameObject m_PreviouslySelected;
-
+	
 	const string k_OpenTransitionName = "Open";
 	const string k_ClosedStateName = "Closed";
 
+	public Text messageText;
+	public InputField emailInput;
+	public InputField passwordInput;
+	public static bool isAuthenticated;
 	public void OnEnable()
 	{
 		m_OpenParameterId = Animator.StringToHash (k_OpenTransitionName);
-
 		if (initiallyOpen == null)
 			return;
 
 		OpenPanel(initiallyOpen);
 	}
-
-	public void OpenPanel (Animator anim)
+    public void OpenPanel (Animator anim)
 	{
+        if (!isAuthenticated)
+        {
+			anim = authMenu;
+        }
 		if (m_Open == anim)
 			return;
 
@@ -70,7 +81,51 @@ public class PanelManager : MonoBehaviour {
 		StartCoroutine(DisablePanelDeleyed(m_Open));
 		m_Open = null;
 	}
-
+	 public void RegisterButton()
+    {
+        if (passwordInput.text.Length < 6)
+        {
+			messageText.text = "Password too short!";
+			return;
+        }
+        var request = new RegisterPlayFabUserRequest
+		{
+			Email = emailInput.text,
+			Password = passwordInput.text,
+			RequireBothUsernameAndEmail = false,
+		};
+		messageText.text = "Registering...";
+		PlayFabClientAPI.RegisterPlayFabUser(request, OnRegisterSuccess, OnError);
+    }
+	void OnRegisterSuccess(RegisterPlayFabUserResult result)
+    {
+		isAuthenticated = true;
+		messageText.text = "Registered and Logged in !!!";
+		OpenPanel(initiallyOpen);
+    }
+	public void Login()
+    {
+		var request = new LoginWithEmailAddressRequest
+		{
+			Email = emailInput.text,
+			Password = passwordInput.text,
+		};
+		messageText.text = "Authenticating...";
+		PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
+    }
+	void OnLoginSuccess(LoginResult result)
+    {
+		isAuthenticated = true;
+		messageText.text = "Logged In!";
+		Debug.Log("Successfull Logged in");
+		OpenPanel(initiallyOpen);
+    }
+	void OnError(PlayFabError error)
+    {
+		messageText.text = error.ErrorMessage;
+		Debug.Log(error.GenerateErrorReport());
+    }
+	
 	IEnumerator DisablePanelDeleyed(Animator anim)
 	{
 		bool closedStateReached = false;
