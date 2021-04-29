@@ -6,6 +6,9 @@ public class Zombie
 {
     public int spawnTime;
     public ZombieType zombieType;
+    public int Spawner;
+    public bool RandomSpawn;
+    public bool isSpwaned;
 }
 public enum ZombieType
 {

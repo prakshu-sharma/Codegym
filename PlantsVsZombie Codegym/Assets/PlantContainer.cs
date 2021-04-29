@@ -8,6 +8,7 @@ public class PlantContainer : MonoBehaviour
     public bool isFull;
     public GameManager gameManger;
     public Image BackGroundImage;
+    public Spawn_points spwanpoint;
     public void Start()
     {
         gameManger = GameManager.instance;

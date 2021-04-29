@@ -10,7 +10,7 @@ public class PeaShooterCard : MonoBehaviour, IDragHandler ,IPointerDownHandler ,
     public Canvas canvas;
     private GameObject DragPeaInstance;
     private GameManager gameManager;
-    
+    //Start menu
     public void Start()
     {
         gameManager = GameManager.instance;

@@ -16,9 +16,10 @@ public class GameManager : MonoBehaviour
 
     public void PlacePlant()
     {
-        if(Drag_Plant!=null && CurrContainer !=null)
+        if(Drag_Plant!=null && CurrContainer !=null )
         {
-            Instantiate(Drag_Plant.GetComponent<PlantDragging>().card.Planted_Pea, CurrContainer.transform);
+            GameObject objectGame= Instantiate(Drag_Plant.GetComponent<PlantDragging>().card.Planted_Pea, CurrContainer.transform);
+            objectGame.GetComponent<PlantController>().zombies = CurrContainer.GetComponent<PlantContainer>().spwanpoint.zombies;
             CurrContainer.GetComponent<PlantContainer>().isFull = true;
         }
     }
