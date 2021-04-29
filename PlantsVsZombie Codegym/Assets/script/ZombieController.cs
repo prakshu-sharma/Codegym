@@ -11,20 +11,29 @@ public class ZombieController : MonoBehaviour
     private bool isStopped;
     public int DamageValue;
     public float DamageCooldown;
+    private gameover go;
+    public void Start()
+    {
+        go = gameover.instance;
+    }
     void Update()
     {
-        if(!isStopped)
+        if (!isStopped)
         {
-            transform.Translate(new Vector3(movementSpeed *Time.timeScale *-1 , 0, 0));
-            /*Vector3 position_Zom = transform.position;
-            if(position_Zom.x <= gameObject.GetComponent<Spawn_points>().Destination.x)
+            transform.Translate(new Vector3(movementSpeed * Time.timeScale * -1, 0, 0));
+            Vector3 position_Zom = transform.position;
+            //gameObject.GetComponentInParent<s>
+            //Debug.Log(gameObject.GetComponent<Spawn_points>().Destination.x);
+            if (position_Zom.x <= transform.parent.GetComponent<Spawn_points>().Destination.x)
             {
+                //   GameObject.Find("GameOver").GetComponent<gameover>().GameOver();
+                go.GameOver();
 
-            }*/
+            }
         }
-   
+
     }
-    
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 10)
@@ -35,7 +44,7 @@ public class ZombieController : MonoBehaviour
     }
     IEnumerator Attack(Collider2D collision)
     {
-        if(collision == null)
+        if (collision == null)
         {
             isStopped = false;
         }

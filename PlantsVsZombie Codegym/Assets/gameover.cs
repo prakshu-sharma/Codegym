@@ -7,8 +7,14 @@ public class gameover : MonoBehaviour
 {
     // Update is called once per frame
     public GameObject gameOverPanel;
-    public void GameOver() 
+    public static gameover instance;
+    private void Awake()
     {
+        instance = this;
+    }
+    public void GameOver()
+    {
+        Debug.Log("GameOVErCAlLed");
         gameOverPanel.SetActive(true);
 
     }

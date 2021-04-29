@@ -8188,48 +8188,13 @@ MonoBehaviour:
     Spawner: 0
     RandomSpawn: 1
     isSpwaned: 0
-  - spawnTime: 19
+  - spawnTime: 22
     zombieType: 0
     Spawner: 1
     RandomSpawn: 1
     isSpwaned: 0
-  - spawnTime: 20
-    zombieType: 1
-    Spawner: 3
-    RandomSpawn: 1
-    isSpwaned: 0
-  - spawnTime: 20
-    zombieType: 1
-    Spawner: 3
-    RandomSpawn: 1
-    isSpwaned: 0
-  - spawnTime: 20
-    zombieType: 2
-    Spawner: 3
-    RandomSpawn: 1
-    isSpwaned: 0
-  - spawnTime: 21
-    zombieType: 2
-    Spawner: 3
-    RandomSpawn: 1
-    isSpwaned: 0
-  - spawnTime: 21
-    zombieType: 2
-    Spawner: 3
-    RandomSpawn: 1
-    isSpwaned: 0
-  - spawnTime: 21
-    zombieType: 0
-    Spawner: 3
-    RandomSpawn: 1
-    isSpwaned: 0
-  - spawnTime: 22
-    zombieType: 0
-    Spawner: 3
-    RandomSpawn: 1
-    isSpwaned: 0
   - spawnTime: 23
-    zombieType: 0
+    zombieType: 1
     Spawner: 3
     RandomSpawn: 1
     isSpwaned: 0
@@ -8248,7 +8213,42 @@ MonoBehaviour:
     Spawner: 3
     RandomSpawn: 1
     isSpwaned: 0
-  - spawnTime: 26
+  - spawnTime: 27
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 28
+    zombieType: 0
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 29
+    zombieType: 0
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 30
+    zombieType: 0
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 31
+    zombieType: 1
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 32
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 32
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 32
     zombieType: 1
     Spawner: 3
     RandomSpawn: 1

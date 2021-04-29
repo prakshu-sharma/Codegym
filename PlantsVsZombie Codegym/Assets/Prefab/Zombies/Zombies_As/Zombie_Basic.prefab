@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 200
   Damage: 1
-  movementSpeed: 0.4
+  movementSpeed: 0.35
   DamageValue: 1
   DamageCooldown: 1
 --- !u!50 &-1143222695499461413
