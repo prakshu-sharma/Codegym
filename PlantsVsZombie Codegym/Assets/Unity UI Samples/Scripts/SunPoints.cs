@@ -40,6 +40,7 @@ public class SunPoints : MonoBehaviour
     }
     public void ChangePoints(int Change)
     {
+        Debug.Log("Entered Change Sun");
         sunPoint_value -= Change;
         sunpoint_text.text = sunPoint_value.ToString("0");
     }

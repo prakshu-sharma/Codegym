@@ -14,13 +14,14 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    public void PlacePlant()
+    public void PlacePlant(int purchase)
     {
         if(Drag_Plant!=null && CurrContainer !=null )
         {
             GameObject objectGame= Instantiate(Drag_Plant.GetComponent<PlantDragging>().card.Planted_Pea, CurrContainer.transform);
             objectGame.GetComponent<PlantController>().zombies = CurrContainer.GetComponent<PlantContainer>().spwanpoint.zombies;
             CurrContainer.GetComponent<PlantContainer>().isFull = true;
+            SunPoints.instance.ChangePoints(purchase);
         }
     }
 }
