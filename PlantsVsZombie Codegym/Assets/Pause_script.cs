@@ -7,7 +7,8 @@ public class Pause_script : MonoBehaviour
     public static bool isGamePaused = false;
     public GameObject PauseMenuUI;
     // Update is called once per frame
-   
+    public GameObject currentUI;
+    public GameObject settingUI;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -39,7 +40,13 @@ public class Pause_script : MonoBehaviour
     }
     public void settings()
     {
-
+        currentUI.SetActive(false);
+        settingUI.SetActive(true);
+    }
+    public void settings_back()
+    {
+        currentUI.SetActive(true);
+        settingUI.SetActive(false);
     }
     public void quit()
     {
