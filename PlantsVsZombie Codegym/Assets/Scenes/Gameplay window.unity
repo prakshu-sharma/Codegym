@@ -2609,7 +2609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombies: []
-  Destination: {x: -807, y: -520, z: 0}
+  Destination: {x: -807, y: -550, z: 0}
 --- !u!1001 &526358072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7524,6 +7524,71 @@ MonoBehaviour:
     Spawner: 0
     RandomSpawn: 1
     isSpwaned: 0
+  - spawnTime: 19
+    zombieType: 0
+    Spawner: 1
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 20
+    zombieType: 1
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 20
+    zombieType: 1
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 20
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 21
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 21
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 21
+    zombieType: 0
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 22
+    zombieType: 0
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 23
+    zombieType: 0
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 24
+    zombieType: 1
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 25
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 26
+    zombieType: 2
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
+  - spawnTime: 26
+    zombieType: 1
+    Spawner: 3
+    RandomSpawn: 1
+    isSpwaned: 0
   zombiesPrefabs:
   - {fileID: 6399846058858363227, guid: 8608db7006a73b14f892f3e46a25047e, type: 3}
   - {fileID: 4996587676669899949, guid: 93bbd057d5bcfa840bec20ad4282a2cd, type: 3}
@@ -10670,6 +10735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 893
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722653279142710217, guid: af90803152cf00f4692baa7acd5273b2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -550
       objectReference: {fileID: 0}
     - target: {fileID: 8722653279376589982, guid: af90803152cf00f4692baa7acd5273b2,
         type: 3}
